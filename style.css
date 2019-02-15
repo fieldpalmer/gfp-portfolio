@@ -70,6 +70,14 @@ main {
   padding: 30px;
 }
 
+.typed-box {
+  border: 2px solid rgb(41, 38, 38);
+  position: relative;
+  top: 30px;
+  margin: 10px;
+  padding: 50px;
+}
+
 footer {
   flex-shrink: 0;
   padding: 10px;

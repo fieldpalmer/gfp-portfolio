@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="./style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -41,8 +43,18 @@
     <!-- main content section featuring welcome landing, brief about me, and gallery preview -->
     <main>
       <header id="landing-header">
-        <h2>Welcome to my Portfolio</h2>
-        <h4>thanks for dropping by</h4>
+        <section class="typed-box">
+          <h1 id="typed-element"></h1>
+        </section>
+        <!-- typed.js library -->
+        <script type="text/javascript">
+          var typed = new Typed("#typed-element", {
+            strings: ["Hello, World", "Welcome!"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true // Default value
+          });
+        </script>
       </header>
     </main>
     <!-- footer section with contact, social, and site map -->
@@ -81,7 +93,5 @@
     </footer>
     <!-- my scripts -->
     <script src="./index.js"></script>
-    <!-- typed.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   </body>
 </html>
