@@ -43,19 +43,61 @@
     <!-- main content section featuring welcome landing, brief about me, and gallery preview -->
     <main>
       <header id="landing-header">
-        <section class="typed-box">
-          <h1 id="typed-element"></h1>
+        <!-- terminal mockup greeter -->
+        <section class="terminal-box">
+          <div class="title-bar">
+            <span class="title">🤖gilbert.ai &mdash; home &mdash; 80x25</span>
+          </div>
+          <!-- typed.js text reveal -->
+          <div class="text-body">
+            $ <span id="typed-element"></span><br />
+            <!-- <span id="typed-element2"></span><br />
+            <span id="typed-element3"></span><br />
+            <span id="typed-element4"></span> -->
+          </div>
         </section>
         <!-- typed.js library -->
         <script type="text/javascript">
           var typed = new Typed("#typed-element", {
-            strings: ["Hello, World", "Welcome!"],
-            typeSpeed: 100,
-            backSpeed: 100,
-            loop: true // Default value
+            strings: [
+              "Greetings, visitor!",
+              "Welcome to my portfolio",
+              "I like to build useful tools and create fun apps",
+              "This site shows off some of the projects I'm currently working on",
+              "Take a look around for more!"
+            ],
+            typeSpeed: 50,
+            backSpeed: 35
+            // loop: true // Default value
           });
+          // typed.js section looping Hello World
+          // var typed2 = new Typed("#typed-element2", {
+          //   strings: [
+          //     "`***********************`\n`***********************`"
+          //   ],
+          //   typeSpeed: 100,
+          //   // backSpeed: 100,
+          //   // loop: true // Default value
+          // });
         </script>
       </header>
+      <section class="about-container">
+        <div class="about-row">
+          <div id="about-left" class="about-col">
+            <img
+              id="main-about-img"
+              src="https://via.placeholder.com/400x250"
+              alt=""
+            />
+          </div>
+          <div id="about-right" class="about-col">
+            <h2>About Me</h2>
+            <hr />
+            <p>Just a small-town boy livin' in a lonely world</p>
+            <p>took the midnight train goin' anywhere</p>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer section with contact, social, and site map -->
     <footer class="sticky-footer">
