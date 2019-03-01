@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- styles -->
     <link href="./style.css" rel="stylesheet" />
+    <link href="./landing-slider/landingSlider.css" rel="stylesheet" />
+    <link href="./typed-js/typedJS.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -42,47 +44,22 @@
     </nav>
     <!-- main content section featuring welcome landing, brief about me, and gallery preview -->
     <main>
+      <!-- Header Section -->
       <header id="landing-header">
         <!-- terminal mockup greeter -->
         <section class="terminal-box">
           <div class="title-bar">
             <span class="title">🤖gilbert.ai &mdash; home &mdash; 80x25</span>
           </div>
-          <!-- typed.js text reveal -->
-          <div class="text-body">
-            $ <span id="typed-element"></span><br />
-            <!-- <span id="typed-element2"></span><br />
-            <span id="typed-element3"></span><br />
-            <span id="typed-element4"></span> -->
-          </div>
+          <div class="text-body">$ <span id="typed-element"></span><br /></div>
         </section>
-        <!-- typed.js library -->
-        <script type="text/javascript">
-          var typed = new Typed("#typed-element", {
-            strings: [
-              "Greetings, visitor!",
-              "Welcome to my portfolio",
-              "I like to build useful tools and create fun apps",
-              "This site shows off some of the projects I'm currently working on",
-              "Take a look around for more!"
-            ],
-            typeSpeed: 50,
-            backSpeed: 35
-            // loop: true // Default value
-          });
-          // typed.js section looping Hello World
-          // var typed2 = new Typed("#typed-element2", {
-          //   strings: [
-          //     "`***********************`\n`***********************`"
-          //   ],
-          //   typeSpeed: 100,
-          //   // backSpeed: 100,
-          //   // loop: true // Default value
-          // });
-        </script>
       </header>
+
+      <!-- about section -->
       <section class="about-container">
+        <!-- brief little about me blurb with photos -->
         <div class="about-row">
+          <!-- left side column -->
           <div id="about-left" class="about-col">
             <img
               id="main-about-img"
@@ -90,12 +67,50 @@
               alt=""
             />
           </div>
+          <!-- right side column -->
           <div id="about-right" class="about-col">
             <h2>About Me</h2>
             <hr />
             <p>Just a small-town boy livin' in a lonely world</p>
             <p>took the midnight train goin' anywhere</p>
           </div>
+        </div>
+      </section>
+
+      <!-- portfolio section -->
+      <section class="slideshow-section">
+        <h2>Gallery Slider</h2>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://via.placeholder.com/400x250" style="width:100%" />
+            <div class="text">Caption Text</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://via.placeholder.com/400x250" style="width:100%" />
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://via.placeholder.com/400x250" style="width:100%" />
+            <div class="text">Caption Three</div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
     </main>
@@ -135,5 +150,7 @@
     </footer>
     <!-- my scripts -->
     <script src="./index.js"></script>
+    <script src="./typed-js/typedJS.js"></script>
+    <script src="./landing-slider/landingSlider.js"></script>
   </body>
 </html>
